@@ -1,68 +1,156 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
+/* Ejercicio 1 */
+.user-card {
+  border: 1px solid #ddd;
+  padding: 15px;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  margin: 10px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.user-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.online {
+  color: green;
+}
+.offline {
+  color: gray;
+}
+
+/* Ejercicio 2 */
+.task-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+/* Ejercicio 3 */
+.product {
+  border: 1px solid #eee;
+  padding: 15px;
+  margin: 10px;
+}
+
+.category {
+  background: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 8px;
+}
+
+.discounted-price {
+  color: #e44d26;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.discount-badge {
+  background: #e44d26;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8em;
+}
+
+/* Ejercicio 4 */
+.btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+}
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+.btn-danger {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-small {
+  padding: 4px 8px;
+  font-size: 0.8em;
+}
+.btn-medium {
+  padding: 8px 16px;
+}
+.btn-large {
+  padding: 12px 24px;
+  font-size: 1.1em;
+}
+
+.btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Ejercicio 5 */
+.user-profile {
+  display: flex;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.user-profile.vertical {
+  flex-direction: column;
+  text-align: center;
+}
+
+.user-profile.horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tag {
+  background: #e9ecef;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  margin-right: 5px;
 }
