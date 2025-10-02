@@ -57,6 +57,21 @@
   opacity: 0.6;
 }
 
+.completada {
+  background-color: green;
+  opacity: 0.6;
+}
+
+.en-progreso {
+  background-color: yellow;
+  opacity: 0.6;
+}
+
+.pendiente {
+  background-color: red;
+  opacity: 0.6;
+}
+
 .delete-btn {
   background: none;
   border: none;
