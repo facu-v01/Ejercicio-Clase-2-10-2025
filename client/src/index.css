@@ -1,156 +1,236 @@
-/* Ejercicio 1 */
-.user-card {
+/* Ejercicio 1 - Counter */
+.counter {
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.counter-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.counter-controls button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.counter-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Ejercicio 2 - TodoList */
+.todo-list {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.add-todo {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-todo input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.todo-text {
+  cursor: pointer;
+  flex: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Ejercicio 3 - RegistrationForm */
+.registration-form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-group input.error {
+  border-color: #ff4444;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 0.8em;
+  margin-top: 5px;
+  display: block;
+}
+
+.success-message {
+  text-align: center;
+  padding: 40px;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+/* Ejercicio 4 - ThemeSwitcher */
+.light-theme {
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.dark-theme {
+  background-color: #1a1a1a;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.theme-switcher {
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.theme-switcher.light {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.theme-switcher.dark {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+.theme-toggle {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.preview-card {
+  padding: 15px;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Ejercicio 5 - ShoppingCart */
+.shopping-cart {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.product-card {
   border: 1px solid #ddd;
   padding: 15px;
   border-radius: 8px;
-  margin: 10px;
+  text-align: center;
 }
 
-.user-header {
+.cart-section {
+  margin-top: 30px;
+  border-top: 2px solid #ddd;
+  padding-top: 20px;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.quantity-controls {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.online {
-  color: green;
-}
-.offline {
-  color: gray;
-}
-
-/* Ejercicio 2 */
-.task-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.task-list li {
-  padding: 8px;
-  border-bottom: 1px solid #eee;
-}
-
-.completed {
-  text-decoration: line-through;
-  opacity: 0.7;
-}
-
-.checkbox {
-  margin-right: 10px;
-}
-
-/* Ejercicio 3 */
-.product {
-  border: 1px solid #eee;
-  padding: 15px;
-  margin: 10px;
-}
-
-.category {
-  background: #f0f0f0;
-  padding: 2px 8px;
-  border-radius: 12px;
-  font-size: 0.8em;
-}
-
-.original-price {
-  text-decoration: line-through;
-  color: #999;
-  margin-right: 8px;
-}
-
-.discounted-price {
-  color: #e44d26;
-  font-weight: bold;
-  margin-right: 8px;
-}
-
-.discount-badge {
-  background: #e44d26;
-  color: white;
-  padding: 2px 6px;
+.quantity-controls button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
   border-radius: 4px;
-  font-size: 0.8em;
 }
 
-/* Ejercicio 4 */
-.btn {
+.remove-btn {
+  background: none;
   border: none;
-  padding: 8px 16px;
+  cursor: pointer;
+  color: #ff4444;
+}
+
+.clear-btn {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
-  font-family: inherit;
 }
 
-.btn-primary {
-  background: #007bff;
-  color: white;
-}
-.btn-secondary {
-  background: #6c757d;
-  color: white;
-}
-.btn-danger {
-  background: #dc3545;
-  color: white;
-}
-
-.btn-small {
-  padding: 4px 8px;
-  font-size: 0.8em;
-}
-.btn-medium {
-  padding: 8px 16px;
-}
-.btn-large {
-  padding: 12px 24px;
-  font-size: 1.1em;
-}
-
-.btn.disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-/* Ejercicio 5 */
-.user-profile {
-  display: flex;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 10px;
-}
-
-.user-profile.vertical {
-  flex-direction: column;
-  text-align: center;
-}
-
-.user-profile.horizontal {
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.user-info {
-  flex: 1;
-}
-
-.tags {
-  margin-top: 10px;
-}
-
-.tag {
-  background: #e9ecef;
-  padding: 4px 8px;
-  border-radius: 12px;
-  font-size: 0.8em;
-  margin-right: 5px;
+.cart-total {
+  text-align: right;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px solid #ddd;
 }
