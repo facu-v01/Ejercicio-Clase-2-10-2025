@@ -2,6 +2,7 @@ import Counter from './components/Counter'
 import Tareas from './components/Tareas'
 import './App.css'
 import TodoList from './components/TodoList';
+import Auth from './components/Auth';
 
 const tareasIniciales = [ 
 { id: 1, texto: 'Aprender React', estado: 'completada' }, 
@@ -9,6 +10,12 @@ const tareasIniciales = [
 { id: 3, texto: 'Crear proyecto final', estado: 'pendiente' } 
 ];
 
+const usuarioEjemplo = { 
+  nombre: 'Ana García', 
+  email: 'ana@ejemplo.com',  
+  rol: 'admin', // ('admin', 'editor' o 'usuario')
+  ultimoAcceso: '15/01/2024' 
+}; 
 
 function App() {
 
@@ -27,7 +34,7 @@ function App() {
 
       <hr/>
 
-      
+      <Auth usuario={usuarioEjemplo}/>
     </>
   )
 }
