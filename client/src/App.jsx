@@ -2,6 +2,7 @@ import Counter from './components/Counter'
 import Tareas from './components/Tareas'
 import './App.css'
 import TodoList from './components/TodoList';
+import Auth from './components/Auth';
 import Productos from './components/Productos';
 
 const tareasIniciales = [ 
@@ -9,6 +10,13 @@ const tareasIniciales = [
 { id: 2, texto: 'Practicar hooks', estado: 'en progreso' }, 
 { id: 3, texto: 'Crear proyecto final', estado: 'pendiente' } 
 ];
+
+const usuarioEjemplo = { 
+  nombre: 'Ana García', 
+  email: 'ana@ejemplo.com',  
+  rol: 'admin', // ('admin', 'editor' o 'usuario')
+  ultimoAcceso: '15/01/2024' 
+}; 
 
 const productos = [ 
   { id: 1, nombre: 'Laptop', categoria: 'electronica', precio: 999 }, 
@@ -35,6 +43,10 @@ function App() {
 
       <hr/>
 
+      <Auth usuario={usuarioEjemplo}/>
+        
+      <hr/>
+      
       <Productos productos={productos}/>
     </>
   )
