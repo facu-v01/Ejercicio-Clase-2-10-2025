@@ -262,8 +262,6 @@
 /*Ejercicio Autenticación con roles*/
 
 .auth {
-/* Ejercicio Filtro Productos */
-.filtro-productos {
   text-align: center;
   padding: 20px;
   border: 2px solid #ddd;
@@ -291,7 +289,16 @@
   to {
     transform: rotate(360deg);
   }
-  max-width: 250px;
+}
+
+
+/* Ejercicio Filtro Productos */
+.filtro-productos {
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  max-width: 500px;
   margin: 20px auto;
 }
 
