@@ -3,6 +3,7 @@ import Tareas from './components/Tareas'
 import './App.css'
 import TodoList from './components/TodoList';
 import Auth from './components/Auth';
+import Productos from './components/Productos';
 
 const tareasIniciales = [ 
 { id: 1, texto: 'Aprender React', estado: 'completada' }, 
@@ -16,6 +17,14 @@ const usuarioEjemplo = {
   rol: 'admin', // ('admin', 'editor' o 'usuario')
   ultimoAcceso: '15/01/2024' 
 }; 
+
+const productos = [ 
+  { id: 1, nombre: 'Laptop', categoria: 'electronica', precio: 999 }, 
+  { id: 2, nombre: 'Smartphone', categoria: 'electronica', precio: 599 }, 
+  { id: 3, nombre: 'Camiseta', categoria: 'ropa', precio: 25 }, 
+  { id: 4, nombre: 'Pantalón', categoria: 'ropa', precio: 30 }, 
+  { id: 5, nombre: 'La voz del gran jefe', categoria: 'libros', precio: 550 }
+];
 
 function App() {
 
@@ -35,6 +44,10 @@ function App() {
       <hr/>
 
       <Auth usuario={usuarioEjemplo}/>
+        
+      <hr/>
+      
+      <Productos productos={productos}/>
     </>
   )
 }
