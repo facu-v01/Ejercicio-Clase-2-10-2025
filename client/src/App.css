@@ -58,21 +58,22 @@
 }
 
 .completada {
-  background-color: green;
-  opacity: 0.6;
+  background-color: lightgreen;
+  opacity: 0.8;
 }
 
 .en-progreso {
-  background-color: yellow;
-  opacity: 0.6;
+  background-color: gold;
+  opacity: 0.8;
 }
 
 .pendiente {
   background-color: red;
-  opacity: 0.6;
+  color: white;
+  opacity: 0.8;
 }
 
-.delete-btn {
+.delete-btn, .complete-btn, .pendiente-btn {
   background: none;
   border: none;
   cursor: pointer;
