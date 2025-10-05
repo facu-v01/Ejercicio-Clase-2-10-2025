@@ -2,6 +2,7 @@ import Counter from './components/Counter'
 import Tareas from './components/Tareas'
 import './App.css'
 import TodoList from './components/TodoList';
+import Productos from './components/Productos';
 
 const tareasIniciales = [ 
 { id: 1, texto: 'Aprender React', estado: 'completada' }, 
@@ -9,6 +10,13 @@ const tareasIniciales = [
 { id: 3, texto: 'Crear proyecto final', estado: 'pendiente' } 
 ];
 
+const productos = [ 
+  { id: 1, nombre: 'Laptop', categoria: 'electronica', precio: 999 }, 
+  { id: 2, nombre: 'Smartphone', categoria: 'electronica', precio: 599 }, 
+  { id: 3, nombre: 'Camiseta', categoria: 'ropa', precio: 25 }, 
+  { id: 4, nombre: 'Pantalón', categoria: 'ropa', precio: 30 }, 
+  { id: 5, nombre: 'La voz del gran jefe', categoria: 'libros', precio: 550 }
+];
 
 function App() {
 
@@ -27,7 +35,7 @@ function App() {
 
       <hr/>
 
-      
+      <Productos productos={productos}/>
     </>
   )
 }
